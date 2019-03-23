@@ -45,6 +45,9 @@ class App extends Component {
                 { label: '>= 35', start: 35 },
               ]}
             />
+            <hr />
+            <h2>Gender</h2>
+            <RefinementList attribute="gender" />
           </div>
           <div className="right-panel">
             <HitsPerPage
@@ -77,6 +80,7 @@ function Hit(props) {
         <Highlight attribute="email" hit={props.hit} />
       </div>
       <div className="hit-price">{props.hit.age}</div>
+      <div className="hit-price">{props.hit.gender}</div>
       <div className="hit-price">{props.hit.college}</div>
       <div className="hit-price">{props.hit.city}</div>
     </div>
